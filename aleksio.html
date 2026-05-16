@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Witaj</title>
+</head>
+<body>
+  <div class="welcome-box">
+    <h1 id="tekst">Witaj!</h1>
+    <div class="decoration"></div>
+    <div class="year">2025</div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const login = params.get("login");
+    if (login) {
+      document.getElementById("tekst").innerText = "Witaj, " + login + "!";
+    }
+  </script>
+</body>
+</html>
